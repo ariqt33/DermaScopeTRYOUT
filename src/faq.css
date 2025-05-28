@@ -1,0 +1,324 @@
+/* === GLOBAL STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #1d3557;
+}
+/* === DROPDOWN NAV MENU === */
+.nav-list li {
+  position: relative;
+}
+
+.nav-list li .arrow {
+  font-size: 0.6rem;
+  margin-left: 4px;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  z-index: 999;
+  min-width: 160px;
+}
+
+.dropdown li {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.dropdown li a {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.dropdown li:hover {
+  background-color: #f4f4f4;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fbffcc;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 30px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-list li a {
+  color: #444;
+  text-decoration: none;
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.arrow {
+  font-size: 0.6rem;
+  margin-left: 4px;
+}
+
+.dropdown {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  z-index: 999;
+  min-width: 160px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.has-dropdown:hover .dropdown,
+.has-dropdown .dropdown:hover {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown li:hover {
+  background-color: #f4f4f4;
+}
+
+.try-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* === HERO SECTION === */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background-color: #f6e3b6;
+}
+
+.hero-text {
+  max-width: 500px;
+  padding: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #3d2c1e;
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+  color: #5a4b42;
+}
+
+.check-btn {
+  background-color: #e9c46a;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  display: inline-block;
+  color: #000;
+}
+
+.check-btn:hover {
+  background-color: #f4a261;
+}
+
+.hero-image img {
+  max-width: 400px;
+  border-radius: 12px;
+}
+/* FAQ Content Section */
+.faq-section, .answer-section {
+  margin: 0 auto;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.faq-section h1 {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.faq-section h1 span {
+  color: #444;
+}
+
+.faq-item {
+  cursor: pointer;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  transition: background 0.2s;
+}
+
+.faq-item:hover {
+  background-color: #f7f7f7;
+}
+
+.faq-item p {
+  font-size: 18px;
+  color: #000;
+}
+
+/* Answer Pages */
+.answer-section h2 {
+  font-size: 24px;
+  color: #f5b63b;
+  margin-bottom: 15px;
+}
+
+.answer-section p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.answer-section a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.answer-section a:hover {
+  text-decoration: underline;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: #1d3557;
+  color: white; /* Footer text color, links will inherit from here or be overridden */
+  padding: 2rem 1rem;
+}
+
+.footer-newsletter {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-newsletter input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+.footer-newsletter button {
+  background-color: #f4a261;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.footer-links h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* To change the color of links in the footer, you'll need a specific rule */
+.footer-links ul li a {
+  color: white; /* <--- CHANGE THIS FOR FOOTER LINK COLOR (e.g., set to white to show up on dark background) */
+  text-decoration: none; /* Add this if you want to remove underline */
+}
+
+.footer-links ul li a:hover {
+  color: #f4a261; /* <--- CHANGE THIS for FOOTER LINK HOVER COLOR */
+}
+
+.footer-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #f4a261;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}

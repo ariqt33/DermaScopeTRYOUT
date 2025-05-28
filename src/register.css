@@ -1,0 +1,244 @@
+/* === GLOBAL STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #1d3557;
+}
+body {
+  font-family: 'Times New Roman', sans-serif;
+  background: url('https://static.vecteezy.com/system/resources/thumbnails/004/449/845/small/abstract-geometric-medical-cross-shape-medicine-and-science-concept-background-medicine-medical-health-cross-healthcare-decoration-for-flyers-poster-web-banner-and-card-illustration-vector.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fbffcc;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 30px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-list li a {
+  color: #444;
+  text-decoration: none;
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.arrow {
+  font-size: 0.6rem;
+  margin-left: 4px;
+}
+
+.dropdown {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  z-index: 999;
+  min-width: 160px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.has-dropdown:hover .dropdown,
+.has-dropdown .dropdown:hover {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown li:hover {
+  background-color: #f4f4f4;
+}
+
+.try-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* === REGISTER FORM === */
+.register-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 80px;
+}
+
+.register-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 320px;
+}
+
+.register-top-btn {
+  background: #6ad3b1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 15px;
+  cursor: default;
+}
+
+.register-form h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #333;
+  margin: 12px 0;
+  text-align: left;
+}
+
+.register-submit {
+  width: 100%;
+  padding: 10px;
+  background: #5a5af0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.register-submit:hover {
+  background: #4848dc;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: #1d3557; /* Same as login footer */
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.footer-newsletter {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-newsletter input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+.footer-newsletter button {
+  background-color: #f4a261;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.footer-links h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color: #f4a261;
+}
+
+.footer-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #f4a261;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
