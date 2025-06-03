@@ -32,7 +32,7 @@ function GettingStarted() {
           <li className="has-dropdown">
             <a href="#">Stories <span className="arrow">▼</span></a>
             <ul className="dropdown">
-              <li><a href="#">From Users</a></li>
+              <li><Link to="/userstories">From Users</Link></li>
               <li><Link to="/skincaretips">Skincare Tips</Link></li>
             </ul>
           </li>
@@ -53,7 +53,7 @@ function GettingStarted() {
               By leveraging advanced deep learning algorithms, DermaCare provides users with preliminary assessments based on clinically relevant features.
             </h2>
             <h3 className="tittle">GET STARTED ON YOUR SKIN WELLNESS JOURNEY!</h3>
-            <a href="#getting-started" className="btn-yellow">Getting Started</a>
+             <button className="btn btn-sm try-btn">Getting Started</button>
           </div>
           <img
             src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRoy9s8a-TUbDvdQo2V19qEcuWrdg7R5By5K9NO8pq8Fhjs8QI5"
