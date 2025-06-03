@@ -142,6 +142,16 @@ a {
   border-radius: 12px;
 }
 
+.try-btn {
+  background-color: rgb(43, 20, 145);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /* === STEPS SECTION === */
 .about-section {
   background: #fffde6;
