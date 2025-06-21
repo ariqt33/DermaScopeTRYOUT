@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import '../App.css';
 
@@ -11,38 +11,41 @@ function Homepage() {
           <img src="https://cbx-prod.b-cdn.net/COLOURBOX63612188.jpg?width=800&height=800&quality=70" alt="Logo" height="50" />
           <span className="logo-text">DermaScope Analyze & Consulting</span>
         </div>
-        <ul className="nav-list">
-          <li><Link to="/">Main</Link></li>
-          <li className="has-dropdown">
-            <Link to="/getting-started">Getting Started <span className="arrow">▼</span></Link>
-            <ul className="dropdown">
-              <li><Link to="/getting-started">Explore DermaScope</Link></li>
-            </ul>
-          </li>
-          <li><Link to="/register">Register</Link></li>  {/* Changed from <a href="#"> */}
-          <li><Link to="/login">Log In</Link></li>        {/* Fixed line */}
-         <li className="has-dropdown">
-  <span>Skin Health <span className="arrow">▼</span></span>
-  <ul className="dropdown">
-    <li><Link smooth to="/skinhealth#skintypes">Find Skin Types</Link></li>
-    <li><Link smooth to="/skinhealth#moles">Skin Spot And Moles</Link></li>
-    <li><Link smooth to="/skinhealth#cancerinfo">Skin Cancer Info</Link></li>
-  </ul>
-</li>
-          <li className="has-dropdown">
-            <a href="#">Stories <span className="arrow">▼</span></a>
-            <ul className="dropdown">
-              <li><a href="#">From Users</a></li>
-              <li><Link to="/skincaretips">Skincare Tips</Link></li>
-            </ul>
-          </li>
-          <li><Link to="/faq">FAQ</Link></li>
-        </ul>
-
-        <div className="right-nav">
-  <button className="btn btn-sm try-btn">Try DermaCare</button>
-</div>
-      </nav>
+       <ul className="nav-list">
+  <li><Link to="/">Main</Link></li>
+  <li className="has-dropdown">
+    <Link to="/getting-started">Getting Started <span className="arrow">▼</span></Link>
+    <ul className="dropdown">
+      <li><Link to="/getting-started">Explore DermaScope</Link></li>
+    </ul>
+  </li>
+  <li><Link to="/register">Register</Link></li>
+  <li><Link to="/login">Log In</Link></li>
+  <li className="has-dropdown">
+    <span>Skin Health <span className="arrow">▼</span></span>
+    <ul className="dropdown">
+      <li><Link smooth to="/skinhealth#skintypes">Find Skin Types</Link></li>
+      <li><Link smooth to="/skinhealth#moles">Skin Spot And Moles</Link></li>
+      <li><Link smooth to="/skinhealth#cancerinfo">Skin Cancer Info</Link></li>
+    </ul>
+  </li>
+  <li className="has-dropdown">
+    <a href="#">Stories <span className="arrow">▼</span></a>
+    <ul className="dropdown">
+      <li><Link to="/userstories">From Users</Link></li>
+      <li><Link to="/skincaretips">Skincare Tips</Link></li>
+    </ul>
+  </li>
+  <li><Link to="/setting">Setting</Link></li>
+  <li><Link to="/faq">FAQ</Link></li>
+</ul>
+ 
+    <div className="right-nav">
+              <Link to="/uploadphoto">
+                <button className="btn btn-sm try-btn">Try DermaCare</button>
+              </Link>
+            </div>
+          </nav>
 
       {/* Hero Section */}
       <section className="hero">
@@ -96,7 +99,7 @@ function Homepage() {
         <h2>See how DermaScope works</h2>
         <p>With over 90% accuracy, DermaCare is clinically validated, providing AI-assisted screening and user-friendly diagnosis tracking.</p>
         <img src="https://external-preview.redd.it/vtwEvubx3NC_P_EH2EL2W_efZVgm0jiv-g57dk6nEag.jpg?width=640&crop=smart&auto=webp&s=ce52d014cafdae385be4c3f7eedc6ed58006675c" alt="Illustration of skin analysis" />
-        <a className="check-btn" href="#">Check Now</a>
+        <Link className="check-btn" to="/uploadphoto">Check Now</Link>
       </section>
 
       {/* Customer Stories */}
@@ -153,16 +156,11 @@ function Homepage() {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-newsletter">
-          <h3>Latest News from</h3>
-          <input type="email" placeholder="Email Address" />
-          <button>Subscribe</button>
-        </div>
         <div className="footer-links">
           <div>
             <h4>Company</h4>
             <ul>
-              <li><a href="#">Home</a></li>
+              <li><Link to="/">Home</Link></li>
               <li><a href="#">About Us</a></li>
             </ul>
           </div>
@@ -170,8 +168,8 @@ function Homepage() {
             <h4>Resources</h4>
             <ul>
               <li><a href="#">Blogs</a></li>
-              <li><a href="#">Podcasts</a></li>
-              <li><a href="#">Stories</a></li>
+              <li><Link to="/faq">FAQ</Link></li>
+              <li><Link to="/userstories">Stories</Link></li>
             </ul>
           </div>
           <div>
@@ -192,4 +190,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default Homepage; 
