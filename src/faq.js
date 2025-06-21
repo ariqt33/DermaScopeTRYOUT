@@ -42,17 +42,20 @@ function FAQ() {
           <li className="has-dropdown">
             <span>Stories <span className="arrow">▼</span></span>
             <ul className="dropdown">
-              <li><a href="#">From Users</a></li>
+              <li><Link to="/userstories">From Users</Link></li>
               <li><Link to="/skincaretips">Skincare Tips</Link></li>
             </ul>
           </li>
+           <li><Link to="/setting">Setting</Link></li>
           <li><Link to="/faq">FAQ</Link></li>
         </ul>
 
-        <div className="right-nav">
-          <button className="btn btn-sm try-btn">Try DermaCare</button>
-        </div>
-      </nav>
+             <div className="right-nav">
+                          <Link to="/uploadphoto">
+                            <button className="btn btn-sm try-btn">Try DermaCare</button>
+                          </Link>
+                        </div>
+                      </nav>
 
       {/* Main FAQ Section */}
       <div className="faq-wrapper">
@@ -64,8 +67,8 @@ function FAQ() {
             </div>
             <h1 className="faq-heading">Have Questions?<br /><span>Get Answers</span></h1>
 
-            <div className="faq-item" onClick={() => showAnswer('dermaCare')}>
-              <p>What is DermaCare?</p>
+            <div className="faq-item" onClick={() => showAnswer('dermaScope')}>
+              <p>What is DermaScope?</p>
             </div>
 
               <div className="faq-item" onClick={() => showAnswer('whatExperienceShouldISeekInAPersonalConsultant')}>
@@ -82,10 +85,10 @@ function FAQ() {
           </section>
         )}
 
-        {activeAnswer === 'dermaCare' && (
+        {activeAnswer === 'dermaScope' && (
           <section className="answer-section">
             <button onClick={goBack} className="back-button">← Back</button>
-            <h2>What is DermaCare?</h2>
+            <h2>What is DermaScope?</h2>
             <p>
               DermaCare is a mobile application powered by AI, created to aid in the early detection of common skin diseases through image analysis.
               Utilizing advanced deep learning techniques, DermaCare offers users preliminary evaluations based on clinically significant features,
@@ -145,42 +148,35 @@ function FAQ() {
         )}
       </div>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-newsletter">
-          <h3>Stay Connected with DermaScope</h3>
-          <form className="newsletter-form">
-            <input type="email" placeholder="Your email address" />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
-        <div className="footer-links">
-          <div>
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="#">Blogs</a></li>
-              <li><a href="#">Podcasts</a></li>
-              <li><a href="#">Stories</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Contact</h4>
-            <ul>
-              <li>1237 Ocean Avenue, Charlotte, NC</li>
-              <li>(888) 945-7266</li>
-              <li><a href="mailto:mail.dermascope@gmail.com">mail.dermascope@gmail.com</a></li>
-            </ul>
-            <a href="#" className="footer-btn">Free Consultation</a>
-          </div>
-        </div>
-        <div className="footer-bottom">
+    {/* Footer */}
+          <footer className="footer">
+            <div className="footer-links">
+              <div>
+                <h4>Company</h4>
+                <ul>
+                  <li><Link to="/">Home</Link></li>
+                  <li><a href="#">About Us</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Resources</h4>
+                <ul>
+                  <li><a href="#">Blogs</a></li>
+                  <li><Link to="/faq">FAQ</Link></li>
+                  <li><Link to="/userstories">Stories</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Contact</h4>
+                <ul>
+                  <li>1237 Ocean Avenue, Charlotte, NC</li>
+                  <li>(888) 945-7266</li>
+                  <li><a href="mailto:mail.dermascope@gmail.com">mail.dermascope@gmail.com</a></li>
+                </ul>
+                <a href="#" className="footer-btn">Free Consultation</a>
+              </div>
+            </div>
+            <div className="footer-bottom">
           <p>&copy; 2025 DermaScope. All rights reserved.</p>
         </div>
       </footer>
