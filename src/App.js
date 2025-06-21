@@ -6,19 +6,23 @@ import Login from './login';
 import Register from './register';
 import SkincareTips from './skincaretips';
 import Skinhealth from './skinhealth';
-import FAQ from'./faq';
+import FAQ from './faq';
+import UploadPhoto from './uploadphoto';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/getting-started" element={<GettingStarted />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/skincaretips" element={<SkincareTips />} />
-      <Route path="/skinhealth" element={<Skinhealth />} />
-      <Route path="/faq" element={<FAQ />} />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/getting-started" element={<GettingStarted />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/skincaretips" element={<SkincareTips />} />
+        <Route path="/skinhealth" element={<Skinhealth />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/uploadphoto" element={<UploadPhoto />} />
+      </Routes>
+    </Router>
   );
 }
 
