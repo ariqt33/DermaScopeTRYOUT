@@ -1,0 +1,50 @@
+.uploadphoto-app-bg {
+  background: #fdf6ec;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 2rem 2.5rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.upload-btn {
+  background: #f7c873;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.upload-btn:hover {
+  background: #f5b942;
+}
+
+.camera-section {
+  margin-top: 1rem;
+}
+#video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+#capture-btn {
+  background: #f7c873;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
