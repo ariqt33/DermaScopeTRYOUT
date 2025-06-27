@@ -1,10 +1,15 @@
 .uploadphoto-app-bg {
-  background: #fdf6ec;
   min-height: 100vh;
+  background-image: url('https://www.uoc.edu/content/dam/news/images/noticies/2024/salut-digital-mobil-apps.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg'); /* Use your desired image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding-top: 100px; /* Offset for navbar */
 }
+
 
 .upload-container {
   background: #fff;
